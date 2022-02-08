@@ -11,7 +11,7 @@ copyright:             Copyright (c) 2015-2016 Brendan Hay
 category:              Network, Google, Cloud
 build-type:            Simple
 extra-source-files:    README.md
-cabal-version:         >= 1.10
+cabal-version:         2.0
 
 description:
     Core data types, functionality and serialisation primitives for
@@ -44,7 +44,7 @@ library
         , Network.Google.Types
 
     build-depends:
-          aeson                >= 0.8
+          aeson                ^>= 1.5
         , attoparsec           >= 0.11.3
         , base                 >= 4.7 && < 5
         , bifunctors           >= 0.1

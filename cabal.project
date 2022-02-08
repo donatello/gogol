@@ -1,0 +1,4 @@
+packages: core/
+          gogol/
+          gogol-storage/
+          gogol-pubsub/

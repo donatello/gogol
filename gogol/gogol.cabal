@@ -11,7 +11,7 @@ copyright:             Copyright (c) 2015-2016 Brendan Hay
 category:              Network, Google, Cloud
 build-type:            Simple
 extra-source-files:    README.md CHANGELOG.md
-cabal-version:         >= 1.10
+cabal-version:         2.0
 
 description:
     This client library contains request and response logic to communicate
@@ -56,7 +56,7 @@ library
         , Network.Google.Internal.Multipart
 
     build-depends:
-          aeson                >= 0.8
+          aeson                ^>= 1.5
         , base                 >= 4.7 && < 5
         , bytestring           >= 0.9
         , case-insensitive     >= 1.2
