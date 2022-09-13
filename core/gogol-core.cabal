@@ -44,7 +44,7 @@ library
         , Network.Google.Types
 
     build-depends:
-          aeson                >= 0.8
+          aeson                >= 2.0
         , attoparsec           >= 0.11.3
         , base                 >= 4.7 && < 5
         , bifunctors           >= 0.1
