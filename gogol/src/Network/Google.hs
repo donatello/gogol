@@ -122,7 +122,6 @@ import Control.Monad.IO.Unlift      (MonadUnliftIO (withRunInIO))
 import Control.Monad.Reader
 import Control.Monad.Trans.Except   (ExceptT)
 import Control.Monad.Trans.Identity (IdentityT)
-import Control.Monad.Trans.List     (ListT)
 import Control.Monad.Trans.Maybe    (MaybeT)
 import Control.Monad.Trans.Resource
 
@@ -190,9 +189,6 @@ instance MonadUnliftIO (Google s) where
     {-# INLINE withRunInIO #-}
 
 instance MonadGoogle s m => MonadGoogle s (IdentityT m) where
-    liftGoogle = lift . liftGoogle
-
-instance MonadGoogle s m => MonadGoogle s (ListT m) where
     liftGoogle = lift . liftGoogle
 
 instance MonadGoogle s m => MonadGoogle s (MaybeT m) where
