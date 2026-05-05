@@ -162,7 +162,8 @@ fromJSONCredentials bs = do
         (Left xe, Left ye) -> Left $
               "Failed parsing service_account: " ++ xe ++
             ", Failed parsing authorized_user: " ++ ye
-        _                  -> x <|> y
+        (Right _, _)       -> x
+        _                  -> y
 
 getConfigDirectory :: MonadIO m => m FilePath
 getConfigDirectory = do
